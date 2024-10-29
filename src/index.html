@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #faf5ff;
+    }
+    .limited-lines {
+      display: -webkit-box;
+      -webkit-line-clamp: 4; 
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .hero-section {
+      padding-bottom: 50px;
+    }
+    
+    .btn-get-started {
+      padding: 10px 20px;
+      font-size: 1rem;
+      max-width: 180px;
+    }
+    
+    @media (max-width: 768px) {
+      #menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        display: none;
+      }
+      #menu.active {
+        display: flex;
+      }
+    }
+    
+    .hide-logo {
+      display: none !important;
+    }
+  </style>
+</head>
+<body> 
+   
+    <div class="w-full bg-violet-200 py-4 px-5 md:py-6 md:px-7 drop-shadow-md">
+        <div class="container mx-auto flex items-center justify-between">
+            <div id="logo" class="font-bold text-violet-700 text-2xl uppercase">
+                Elec<span class="text-slate-800">tionist</span>
+            </div>
+            
+            <div class="md:hidden text-2xl text-slate-800 cursor-pointer" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            
+            <div id="menu" class="md:flex flex-col md:flex-row ml-auto mr-11  gap-4 md:gap-8 mt-4 md:mt-0 text-lg font-medium text-slate-800 capitalize w-full md:w-auto">
+                <a href="#" class="hover:text-violet-700 transition duration-300 ease-in-out">Beranda</a>
+                <a href="#" class="hover:text-violet-700 transition duration-300 ease-in-out">Calon</a>
+                <a href="#" class="hover:text-violet-700 transition duration-300 ease-in-out">Profil</a>
+                <a href="#" class="hover:text-violet-700 transition duration-300 ease-in-out">Visi & Misi</a>
+ 
+                <div class="md:hidden mt-4">
+                    <a href="#" class="bg-violet-700 py-2 px-6 rounded-full font-semibold text-white hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out">
+                        Login
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hidden md:block">
+                <a href="#" class="bg-violet-700 py-2 px-6 rounded-full font-semibold text-white hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out">
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+   
+    <div class="w-full bg-purple-50 py-8 hero-section">
+        <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-between px-4 md:px-0">
+            <div class="w-full md:w-1/2 text-left mb-6 md:mb-0">
+                <h1 class="font-extrabold text-4xl md:text-6xl text-violet-700 uppercase">Pilih Calon <span class="text-slate-800">Pemimpinmu</span></h1>
+                <p class="text-slate-500 font-normal leading-relaxed limited-lines mt-4 md:mt-9">
+                    Pemimpin bukanlah tentang kekuasaan, melainkan tanggung jawab. Pilihlah pemimpin yang bijaksana, yang mengutamakan keadilan dan kesejahteraan rakyat. Ini adalah hal penting yang perlu diperhatikan ketika memilih calon pemimpin.
+                </p>
+                <div class="mt-6 md:mt-10">
+                    <a href="#" class="btn-get-started py-2 px-5 md:py-3 md:px-6 bg-violet-700 font-semibold rounded-full flex items-center justify-center gap-2 text-white hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out">
+                        <span>Get Started</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5L15.75 12 8.25 19.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
+                <div class="w-[320px] md:w-[420px] h-[320px] md:h-[420px] rounded-xl overflow-hidden relative">
+                    <img src="DALL·E 2024-10-26 14.58.42 - A fictional president, standing confidently in a formal setting like a grand office with large windows and flags in the background. He has a calm and  1.png" alt="" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const logo = document.getElementById('logo');
+
+            menu.classList.toggle('active');
+
+            if (menu.classList.contains('active')) {
+                logo.classList.add('hide-logo');
+                console.log("Logo disembunyikan");
+            } else {
+                logo.classList.remove('hide-logo');
+                console.log("Logo ditampilkan kembali");
+            }
+        }
+    </script>
+
+<div class="w-full bg-purple-50 pb-20 py-60">
+  <div class="container mx-auto">
+    <div class="max-w-xl mb-8 text-center mx-auto">
+      <h1 class="font-bold text-slate-800 text-4xl capitalize">Calon <span class=" text-violet-700 ">Kandidat</span></h1>
+    </div>
+    
+    <div class="max-w-xl text-slate-800 mx-auto text-center capitalize">
+      <p class="mb-7">Pilihlah pemimpin yang bekerja untuk rakyat, bukan pemimpin
+        yang menjadikan rakyat sebagai tangga menuju kekuasaan.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
+  <div class="w-64 bg-white rounded-lg shadow-2xl overflow-hidden">
+    <h1 class="text-center font-semibold font-poppins">01</h1>
+    <img src="hendi andhika.png" alt="Kandidat 1" class="w-full h-48 object-cover mr-5 mt-6">
+    <div class="p-5 text-center">
+      <p class="font-bold text-lg">Andika Perkasa & Hendrar Prihadi</p>
+    </div>
+  </div>
+  <div class="w-64 bg-white rounded-lg shadow-2xl overflow-hidden">
+    <h1 class="text-center font-semibold font-poppins">02</h1>
+    <img src="luthfi taj yasin.png" alt="Kandidat 2" class="w-full h-48 object-cover mt-6">
+    <div class="p-5 text-center">
+      <p class="font-bold text-lg">Ahmad Luthfi & Taj Yasin Maimoen</p>
+    </div>
+  </div>
+</div>
+
+<div class="w-full bg-purple-50 py-20">
+  <div class="container mx-auto text-center py-16">
+
+    <!-- Judul Profil Kandidat -->
+    <h1 class="text-4xl font-bold text-slate-800 mb-12">Profil <span class="text-violet-700">Kandidat</span></h1>
+
+    <!-- Kandidat Pertama -->
+    <div class="text-6xl font-bold text-gray-700 mb-4">01</div> <!-- Nomor Kandidat di atas -->
+    <div class="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-10 lg:gap-20 my-12">
+
+      <!-- Profil Cagub 1 -->
+      <div class="w-full lg:w-1/2 text-center">
+        <h2 class="text-xl font-bold text-gray-700 mb-2">Cagub</h2>
+        <img src="Jenderal_TNI_Andika_Perkasa,_Panglima_TNI 1.png" alt="Kandidat Cagub" class="w-auto h-64 object-cover mx-auto">
+        <div class="mt-4">
+          <p class="font-bold text-lg">Jenderal TNI (Purn.) Muhammad Andika Perkasa, S.E., M.A., M.Sc., M.Phil., Ph.D</p>
+          <p class="text-left">Tempat Lahir: Bandung</p>
+          <p class="text-left">Tanggal Lahir: 21 Des 1964</p>
+          <p class="mt-2 text-left">Riwayat Pendidikan :</p>
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <li>Akademi militer (1987)</li>
+            <li>S1 Manajemen - Universitas Terbuka</li>
+            <li>The Military College of Vermont, Norwich University (1999)</li>
+            <li>National War College, Washington D.C. (2003)</li>
+            <li>Harvard University (2004)</li>
+          </ul>
+          <a href="#" onclick="toggleText(event, 'more-text-cagub1', this)" class="mt-4 inline-block bg-violet-700 py-3 px-8 rounded-full font-semibold text-white border-violet-400 hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out">Baca Selengkapnya</a>
+        </div>
+        <div id="more-text-cagub1" class="mt-4 hidden">
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <li>Akademi militer (1987)</li>
+            <li>S1 Manajemen - Universitas Terbuka</li>
+            <li>The Military College of Vermont (1999)</li>
+            <li>National War College, Washington D.C. (2003)</li>
+            <li>Harvard University (2004)</li>
+          </ul>
+          <p class="mt-2 text-left">Riwayat Pekerjaan :</p>
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <li>Komandan Resimen Induk Kodam Jaya (2011-2012)</li>
+            <li>Komandan Korem 023/Kawal Samudera (2012-2013)</li>
+            <li>Kepala Dinas Penerangan AD (2013-2014)</li>
+            <li>Komandan Paspampres (2014-2016)</li>
+            <li>Panglima Komando Daerah Militer XII/Tanjungpura (2016-2018)</li>
+            <li>Komandan Kodiklat TNI AD (2018)</li>
+            <li>Panglima Komando Cadangan Strategis AD ke-39 (2018)</li>
+            <li>Kepala Staff TNI AD ke-32 (2018-2021)</li>
+            <li>Panglima TNI ke-21 (2021-2022)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Profil Cawagub 1 -->
+      <div class="w-full lg:w-1/2 text-center">
+        <h2 class="text-xl font-bold text-gray-700 mb-2">Cawagub</h2>
+        <img src="Ketua_LKPP_Hendrar_Prihadi 1.png" alt="Kandidat Cawagub" class="w-auto h-64 object-cover mx-auto">
+        <div class="mt-4">
+          <p class="font-bold text-lg">Dr. H. Hendrar Prihadi, S.E., M.M.</p>
+          <p class="text-left">Tempat Lahir: Semarang</p>
+          <p class="text-left">Tanggal Lahir: 30 Maret 1971</p>
+          <p class="mt-2 text-left">Riwayat Pendidikan :</p>
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <li>Doktoral (S-3) di Universitas Diponegoro (2018-2021)</li>
+            <li>Magister Manajemen (S-2) di Universitas Diponegoro (1999-2002)</li>
+            <li>Sarjana Ekonomi (S-1) di UNIKA Soegijapranata Semarang (1992-1997)</li>
+          </ul>
+          <a href="#" onclick="toggleText(event, 'more-text-cawagub1', this)" class="mt-4 inline-block bg-violet-700 py-3 px-8 rounded-full font-semibold text-white border-violet-400 hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out">Baca Selengkapnya</a>
+        </div>
+        <div id="more-text-cawagub1" class="mt-4 hidden">
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <p class="mt-2 text-left">Riwayat Pekerjaan :</p>
+            <li>Plt Wali Kota Semarang (2011-2013)</li>
+            <li>Wali Kota Semarang (2013-2015)</li>
+            <li>Wali Kota Semarang (2021-2022)</li>
+            <li>Kepala Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah (2022-sekarang)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kandidat Kedua -->
+    <div class="text-6xl font-bold text-gray-700 mb-4">02</div> <!-- Nomor Kandidat di atas -->
+    <div class="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-10 lg:gap-20 my-12">
+
+      <!-- Profil Cagub 2 -->
+      <div class="w-full lg:w-1/2 text-center">
+        <h2 class="text-xl font-bold text-gray-700 mb-2">Cagub</h2>
+        <img src="Ahmad_Luthfi 1.png" alt="Kandidat Cagub Kedua" class="w-auto h-64 object-cover mx-auto">
+        <div class="mt-4">
+          <p class="font-bold text-lg">KomJen. Pol. Ahmad Luthfi</p>
+          <p class="text-left">Tempat Lahir: Surabaya</p>
+          <p class="text-left">Tanggal Lahir: 22 November 1966</p>
+          <p class="mt-2 text-left">Riwayat Pendidikan umum :</p>
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <li>Sekolah Dasar (SD): 1978</li>
+            <li>Sekolah Menengah Pertama (SMP): 1981</li>
+            <li>Sekolah Menengah Atas (SMA): 1988</li>
+            <li>Sarjana 1: 1997</li>
+            <li>Sarjana 2: 2000</li>
+          </ul>
+          <a href="#" onclick="toggleText(event, 'more-text-cagub2', this)" class="inline-block bg-violet-700 py-3 px-8 rounded-full font-semibold text-white border-violet-400 hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out">Baca Selengkapnya</a>
+        </div>
+        <div id="more-text-cagub2" class="mt-4 hidden">
+          <p class="mt-2 text-left">Riwayat Pendidikan kepolisian :</p>
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <li>Sepa (Sekolah Perwira): 1989</li>
+            <li>Selapa (Sekolah Lanjutan Perwira): 2000</li>
+            <li>Sespim (Sekolah Staf dan Pimpinan): 2011</li>
+            <li>Sespati (Sekolah Staf dan Pati): 2020</li>
+          </ul>
+          <p class="mt-2 text-left">Riwayat Jabatan:</p>
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <li>Kabag Jarlat SPN Purwokerto (2002)</li>
+            <li>Kapolres Kudus (2011)</li>
+            <li>Kapolres Blora (2012)</li>
+            <li>Kapolrestabes Surakarta (2015)</li>
+            <li>Dir Intelkam Polda Jawa Tengah (2016)</li>
+            <li>Kapolda Jawa Tengah (2020)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Profil Cawagub 2 -->
+      <div class="w-full lg:w-1/2 text-center">
+        <h2 class="text-xl font-bold text-gray-700 mb-2">Cawagub</h2>
+        <img src="Taj_Yasin_Maimoen,_Wagub_Jateng 1.png" alt="Kandidat Cawagub Kedua" class="w-auto h-64 object-cover mx-auto">
+        <div class="mt-4">
+          <p class="font-bold text-lg">Taj Yasin Maimoen</p>
+          <p class="text-left">Tempat Lahir: Rembang</p>
+          <p class="text-left">Tanggal Lahir: 02 Jul 1983</p>
+          <p class="mt-2 text-left">Riwayat Pendidikan :</p>
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <li>Madrasah Ibtidaiyah Ghozaliyah 1989</li>
+            <li>Madrasah Tsanawiyah Ghozaliyah 1995 - 1998</li>
+            <li>Madrasah Aliyah Al-Anwa 1998 - 2001</li>
+            <li>Universitas Ahmad, Damaskus, Suriah</li>
+          </ul>
+          <a href="#" onclick="toggleText(event, 'more-text-cawagub2', this)" class="mt-4 inline-block bg-violet-700 py-3 px-8 rounded-full font-semibold text-white border-violet-400 hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out">Baca Selengkapnya</a>
+        </div>
+        <div id="more-text-cawagub2" class="mt-4 hidden">
+          <p class="mt-2 text-left">Riwayat Pekerjaan :</p>
+          <ul class="text-left list-disc list-inside mx-auto inline-block">
+            <li>Pengurus Pelajar Islam Damaskus (bagian humas) 2004</li>
+            <li>Wakil bendahara Panitia MAL Pengurus Pelajar Islam Damaskus</li>
+            <li>Ketua PAC (Pengurus Anak Cabang) PPP Kecamatan Sarang 2009-2015</li>
+            <li>Wakil ketua PW (Pimpinan Wilayah) Ansor Jawa Tengah 2014-2018</li>
+            <li>Wakil ketua DPW PPP Jawa Tengah 2011-2016</li>
+            <li>Wakil bendahara DPP PPP 2016-2021</li>
+            <li>Ketua DPP PPP Jawa Tengah 2017-2022</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleText(event, id, link) {
+      event.preventDefault();
+      const element = document.getElementById(id);
+      if (element.classList.contains('hidden')) {
+          element.classList.remove('hidden');
+          link.textContent = 'Tutup';
+      } else {
+          element.classList.add('hidden');
+          link.textContent = 'Baca Selengkapnya';
+      }
+  }
+</script>
+
+
+<div class="w-full bg-violet-100 py-20">
+  <div class="container mx-auto text-center px-4">
+    <h1 class="font-bold text-violet-700 text-3xl md:text-4xl capitalize mb-9">Visi<span class="text-slate-800"> & </span>Misi</h1>
+  </div>
+  <div class="container mx-auto max-w-4xl bg-white rounded-lg shadow-lg p-6 md:p-8">
+    <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-4">1. Andhika Perkasa & Hendrar Prihadi</h2>
+    <img src="202408262151-main.cropped_1724683890 1.png" alt="" class="w-full h-auto rounded-md mb-6 object-cover">
+    <h3 class="font-bold text-lg md:text-xl text-violet-700 mb-2">Visi</h3>
+    <p class="text-slate-700 mb-4 text-sm md:text-base">
+      Pasangan calon Gubernur dan Wakil Gubernur Jawa Tengah, Andika Perkasa dan Hendrar Prihadi, telah mengusung visi dan misi untuk periode 2024–2029. Visinya ialah "Jembatan Emas Mewujudkan Jawa Tengah Aman, Sejahtera, Berdikari dan Ramah Lingkungan."
+    </p>
+    <ul class="text-slate-700 list-disc list-inside space-y-2 text-sm md:text-base">
+      <li><strong>1. Jembatan Emas</strong> - Melambangkan sarana untuk menghubungkan kondisi saat ini dengan tujuan 2029, sebagai landasan menuju masa depan yang lebih baik.</li>
+      <li><strong>2. Aman</strong> - Menyediakan lingkungan yang aman dan harmonis bagi masyarakat, mencakup perlindungan fisik dari ancaman, kejahatan, dan stabilitas sosial-politik.</li>
+    </ul>
+
+    <div id="bacaSelengkapBuka" class="hidden">
+      <ul class="text-slate-700 list-disc list-inside space-y-2 mt-4 text-sm md:text-base">
+        <li><strong>3. Sejahtera</strong> - Meningkatkan kesejahteraan masyarakat melalui pertumbuhan ekonomi, lapangan kerja, dan pemerataan dalam aspek pendidikan, kesehatan, dan layanan dasar.</li>
+        <li><strong>4. Berdikari</strong> - Mendorong masyarakat untuk mandiri secara ekonomi.</li>
+        <li><strong>5. Ramah Lingkungan</strong> - Mengutamakan perlindungan dan kelestarian lingkungan dengan praktik berkelanjutan.</li>
+        <br>
+        <h3 class="font-bold text-lg md:text-xl text-violet-700 mb-2">Misi</h3>
+        <ul class="text-slate-700 list-disc list-inside space-y-2 text-sm md:text-base">
+          <li><strong>1.</strong> Memperkuat komitmen terhadap konsensus nasional.</li>
+          <li><strong>2.</strong> Menciptakan rasa aman bagi seluruh warga, guyub, rukun, gotong royong.</li>
+          <li><strong>3.</strong> Meningkatkan kesejahteraan masyarakat.</li>
+          <li><strong>4.</strong> Meningkatkan perekonomian daerah yang lebih tangguh.</li>
+          <li><strong>5.</strong> Memperkuat ketahanan budaya, karakter, dan kearifan lokal.</li>
+        </ul>
+
+        <div class="container mx-auto max-w-4xl bg-white rounded-lg p-4 md:p-8 mt-8">
+          <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-4">2. Ahmad Luthfi dan Taj Yasin Maimoen</h2>
+          <img src="ahmad luthfi fufufafa yasin.png" alt="" class="w-full h-auto rounded-md mt-6 object-cover">
+          <h3 class="font-bold text-lg md:text-xl text-violet-700 mt-11">Visi</h3>
+          <li><strong>Jawa Tengah Maju dan Berkelanjutan untuk Indonesia Emas</strong></li>
+          <br>
+          <h3 class="font-bold text-lg md:text-xl text-violet-700 mb-2">Misi</h3>
+          <ul class="text-slate-700 list-disc list-inside space-y-2 text-sm md:text-base">
+            <li><strong>1.</strong> Stabilitas harga</li>
+            <li><strong>2.</strong> Peningkatan pendapatan dan pemberantasan kemiskinan</li>
+            <li><strong>3.</strong> Penciptaan lapangan kerja</li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+    <button onclick="toggleContent()" id="buttonSelengkapnya" class="mt-4 bg-violet-700 py-3 px-8 rounded-full font-semibold text-white border-violet-400 hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out">
+      Baca Selengkapnya
+    </button>
+  </div>
+</div>
+
+<script>
+  function toggleContent() {
+    const moreContent = document.getElementById("bacaSelengkapBuka");
+    const toggleButton = document.getElementById("buttonSelengkapnya");
+    
+    if (moreContent.classList.contains("hidden")) {
+      moreContent.classList.remove("hidden");
+      toggleButton.textContent = "Tutup";
+    } else {
+      moreContent.classList.add("hidden");
+      toggleButton.textContent = "Baca Selengkapnya";
+    }
+  }
+</script>
+
+
+<div class="w-full bg-violet-100 py-20">
+  <div class="container mx-auto text-center px-4">
+    <h1 class="font-bold text-slate-800 text-3xl md:text-4xl capitalize mb-9">
+      Sudah tentukan pilihanmu?<span class="text-violet-700"> Vote disini! </span>
+    </h1>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto justify-center">
+      
+      <div class="w-full md:w-64 bg-white rounded-lg shadow-2xl overflow-hidden mx-auto">
+        <h1 class="text-center font-semibold font-poppins text-lg">01</h1>
+        <img src="hendi andhika.png" alt="Kandidat 1" class="w-full h-60 object-cover mt-4">
+        <div class="p-5 text-center">
+          <p class="font-bold text-lg">Andika Perkasa & Hendrar Prihadi</p>
+          <button 
+            class="bg-violet-700 py-3 px-6 md:px-8 rounded-full font-semibold text-white border-violet-400 hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out"
+            onclick="pilihKandidat('Andika Perkasa & Hendrar Prihadi')">
+            Vote
+          </button>
+        </div>
+      </div>
+
+      <div class="w-full md:w-64 bg-white rounded-lg shadow-2xl overflow-hidden mx-auto">
+        <h1 class="text-center font-semibold font-poppins text-lg">02</h1>
+        <img src="luthfi taj yasin.png" alt="Kandidat 2" class="w-full h-60 object-cover mt-4">
+        <div class="p-5 text-center">
+          <p class="font-bold text-lg">Ahmad Luthfi & Taj Yasin Maimoen</p>
+          <button 
+            class="bg-violet-700 py-3 px-6 md:px-8 rounded-full font-semibold text-white border-violet-400 hover:bg-violet-400 hover:text-violet-700 transition duration-300 ease-in-out"
+            onclick="pilihKandidat('Ahmad Luthfi & Taj Yasin Maimoen')">
+            Vote
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  function pilihKandidat(namaKandidat) {
+    alert("Anda telah memilih " + namaKandidat);
+  }
+</script>
+
+
+<div class="bg-gray-800 text-white py-6">
+  <div class="container mx-auto px-4">
+    <p class="text-sm mt-1 text-center"> @Sotgan Api All Rights. Reserved</p>
+  </div>
+</div>
+
+
+    
+    
+    
+      
+      
+        
+     <!-- kandidat profil end -->
+   <!-- bagian content end -->
+
+</body>
+</html>
